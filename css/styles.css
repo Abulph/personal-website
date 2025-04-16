@@ -161,7 +161,7 @@ mark {
 
 /* HEADER */
 header{
-    background-color: rgb(255, 240, 240);
+    background-color: var(--pico-color);
     z-index: 100;
 }
 
