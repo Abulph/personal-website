@@ -255,7 +255,7 @@ main {
 @media (max-width: 400px){
     .hero {
         & .profile-container {
-            max-height: fit-content;
+            max-height: none;
         }
     }
 }
