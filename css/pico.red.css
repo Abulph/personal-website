@@ -469,7 +469,7 @@ details summary[role=button]:not(.outline)::after {
 }
 [data-theme=dark] {
   --pico-background-color: #13171f;
-  --pico-color: #0e0a09;
+  --pico-color: #ffffff;
   --pico-text-selection-color: rgba(241, 121, 97, 0.1875);
   --pico-muted-color: #7b8495;
   --pico-muted-border-color: #202632;
