@@ -52,11 +52,11 @@ html {
     aspect-ratio: 1/1;
 }
 
-#bluesky {
+.bluesky {
     mask-image: var(--bluesky-icon);
 }
 
-#linkedin {
+.linkedin {
     mask-image: var(--linkedin-icon);
 }
 
