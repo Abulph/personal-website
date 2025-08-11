@@ -176,7 +176,7 @@ header{
 }
 
 .external-link{
-    display: block;
+    display: inline-block;
     text-align: right;
     margin: 5px 0;
 }
