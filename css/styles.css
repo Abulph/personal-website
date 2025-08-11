@@ -163,6 +163,10 @@ mark {
     border-radius: 50%;
 }
 
+.spacer {
+    height: 75px;
+}
+
 /* HEADER */
 header{
     z-index: 100;
