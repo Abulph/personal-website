@@ -33,25 +33,126 @@
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     <!--Meta/Schema Data-->
-    <meta name="description" content="Jay Maxwell is a Fort Wayne, IN based digital experience strategist specializing in clean web design, reliable hosting, brand management, graphic design, professional photography, and generative AI solutions. Helping businesses create consistent, impactful online experiences.">
+    <meta name="description" content="Jay Maxwell is a digital experience strategist based in Fort Wayne, IN that helps businesses & professionals create consistent, impactful online experiences.">
     <meta property="og:title" content="Jay Maxwell - Digital Experience Strategist" />
     <meta property="og:type" content="profile" />
     <meta property="og:image" content="https://jaymax.co/images/Jay-Maxwell-Smiling.jpg" />
     <meta property="og:url" content="https://jaymax.co" />
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://jaymax.co/#website",
+      "url": "https://jaymax.co",
+      "name": "Jay Maxwell - Digital Experience Strategist",
+      "publisher": { "@id": "https://jaymax.co/#person" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://jaymax.co/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://jaymax.co/#person",
+      "name": "Jay Maxwell",
+      "jobTitle": "Digital Experience Strategist",
+      "url": "https://jaymax.co",
+      "image": "https://jaymax.co/Jay-Maxwell-Headshot-Smiling.jpeg",
+      "description": "Jay Maxwell – Digital Experience Strategist specializing in web design, hosting, brand management, graphic design, photography, and generative AI solutions.",
+      "email": "mailto:jay@jaymax.co",
+      "telephone": "+1-812-727-0642",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fort Wayne",
+        "addressRegion": "Indiana",
+        "addressCountry": "USA"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/jarod-maxwell/",
+        "https://bsky.app/profile/jaymaxco.bsky.social",
+        "https://share.google/syvooJxKM1bhjbSMy"
+      ],
+      "knowsAbout": [
+        "Web Design",
+        "Web Hosting",
+        "Digital Brand Management",
+        "Graphic Design",
+        "Photography",
+        "Generative AI Solutions"
+      ],
+      "worksFor": { "@id": "https://jaymax.co/#localbusiness" },
+      "makesOffer": [
         {
-          "@context": "https://schema.org/",
-          "@type": "Person",
-          "name": "Jay Maxwell",
-          "url": "https://jaymax.co",
-          "image": "https://jaymax.co/images/Jay-Maxwell-Memoji.png",
-          "sameAs": [
-            "https://www.linkedin.com/in/jarod-maxwell/",
-            "https://bsky.app/profile/jaymaxco.bsky.social"
-          ],
-          "jobTitle": "Digital Experience Strategist"  
+          "@type": "Service",
+          "name": "Web Design",
+          "description": "Clean, user-friendly websites tailored to client needs.",
+          "provider": { "@id": "https://jaymax.co/#localbusiness" }
+        },
+        {
+          "@type": "Service",
+          "name": "Web Hosting",
+          "description": "Reliable and secure hosting solutions for seamless online operations.",
+          "provider": { "@id": "https://jaymax.co/#localbusiness" }
+        },
+        {
+          "@type": "Service",
+          "name": "Digital Brand Management",
+          "description": "Consistent online branding through social media, SEO, and reputation management.",
+          "provider": { "@id": "https://jaymax.co/#localbusiness" }
+        },
+        {
+          "@type": "Service",
+          "name": "Graphic Design",
+          "description": "High-quality logos, business cards, and marketing materials.",
+          "provider": { "@id": "https://jaymax.co/#localbusiness" }
+        },
+        {
+          "@type": "Service",
+          "name": "Photography",
+          "description": "Professional photography services for brand imagery, product shots, and promotional content by Michael Sartiano.",
+          "provider": { "@id": "https://jaymax.co/#localbusiness" }
+        },
+        {
+          "@type": "Service",
+          "name": "Generative AI Solutions",
+          "description": "AI-driven content creation, image generation, and workflow automation to enhance brand storytelling and efficiency.",
+          "provider": { "@id": "https://jaymax.co/#localbusiness" }
         }
-        </script>
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://jaymax.co/#localbusiness",
+      "name": "JayMax.co",
+      "url": "https://jaymax.co",
+      "image": "https://jaymax.co/Jay-Maxwell-Headshot-Smiling.jpeg",
+      "description": "Digital Experience Strategist in Fort Wayne, Indiana, offering web design, hosting, brand management, graphic design, photography, and AI-driven solutions.",
+      "telephone": "+1-812-727-0642",
+      "email": "mailto:jay@jaymax.co",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fort Wayne",
+        "addressRegion": "Indiana",
+        "addressCountry": "USA"
+      },
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.linkedin.com/in/jarod-maxwell/",
+        "https://bsky.app/profile/jaymaxco.bsky.social",
+        "https://share.google/syvooJxKM1bhjbSMy"
+      ],
+      "areaServed": {
+        "@type": "Place",
+        "name": "Fort Wayne, Indiana"
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
     <header class="container-fluid">
