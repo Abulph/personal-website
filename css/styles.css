@@ -19,7 +19,7 @@ html {
 
 @media(min-width: 768px){
     html {
-    scroll-padding-top: 17vh;
+    scroll-padding-top: 8vh;
     }
 }
 
@@ -151,7 +151,7 @@ mark {
 }
 
 .emoji {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .center-image {
@@ -159,12 +159,47 @@ mark {
     justify-content: center;
 }
 
-.circular-image {
-    border-radius: 50%;
+.image-seamless {
+    padding: 0 0 1rem 0;
+}
+
+.jay-maxwell-headshot {
+    height: 450px;
+    background-image: url("../images/Jay-Maxwell-Smiling.jpg"
+    );
+    background-size: cover;
+    background-position: top;
+    margin-bottom: 1.5rem;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .spacer {
     height: 75px;
+}
+
+
+.service {
+    & div {
+        background: var(--body-gradient);
+        padding: 10px;
+        margin-top: 1rem;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+            & img {
+        max-width: 100px;
+        filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.25));
+    }
+    }
+    & h3 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    & p {
+        text-align: center;
+    }
 }
 
 /* HEADER */
@@ -322,12 +357,25 @@ main {
 }
 
 .portfolio-entry{
+display: block;
+gap: 20px;
 & > img {
-    width: 100%;
+    /* width: 100%; */
     border: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     box-shadow: 2px 3px rgba(0, 0, 0, 0.25);
 }
+& h3, h4{
+    text-align: center;
+}
+}
+
+@media (min-width: 768px) {
+    .portfolio-entry{
+        display: grid;
+        grid: auto / 50% 50%;
+        gap: 20px;
+    }
 }
 
 #portfolio{
@@ -341,24 +389,28 @@ main {
 }
 
 .personal-values {
-    & p{
+    display: grid;
+    grid: 3rem auto / auto;
     text-align: center;
-    background: var(--body-gradient);
-    padding: 10px;
-    border-radius: 5px;
+& p {
+        display: grid;
+        padding: 10px;
+        border-radius: 5px;
+        background: var(--body-gradient);
 }
 }
 
 .personal-interests {
     display: grid;
-    grid: auto / 47.5% 47.5%;
-    gap: 5%;
+    grid: auto / 4;
+    gap: 10px;
     & > *{
         display: flex;
+        padding: 10px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        aspect-ratio: 1/1;
+        /* aspect-ratio: 1/1; */
         background: var(--body-gradient);
         border-radius: 5px;
         text-align: center;
