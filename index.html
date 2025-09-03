@@ -37,11 +37,19 @@
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     <!--Meta/Schema Data-->
-    <meta name="description" content="Jay Maxwell is a digital experience strategist based in Fort Wayne, IN that helps businesses & professionals create consistent, impactful online experiences.">
+    <meta name="description" content="Jay Maxwell, a digital experience strategist in Fort Wayne, IN, helps businesses & professionals create consistent, impactful websites & online brands.">
+    <meta name="author" content="Jay Maxwell">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jaymax.co/">
     <meta property="og:title" content="Jay Maxwell - Digital Experience Strategist" />
-    <meta property="og:type" content="profile" />
+    <meta property="og:type" content="website" />
     <meta property="og:image" content="https://jaymax.co/images/Jay-Maxwell-Smiling.jpg" />
     <meta property="og:url" content="https://jaymax.co" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jay Maxwell - Digital Experience Strategist">
+    <meta name="twitter:description" content="Digital experience strategist in Fort Wayne, IN offering web design, hosting, branding, and AI solutions.">
+    <meta name="twitter:image" content="https://jaymax.co/images/Jay-Maxwell-Smiling.jpg">
+
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -64,7 +72,7 @@
       "name": "Jay Maxwell",
       "jobTitle": "Digital Experience Strategist",
       "url": "https://jaymax.co",
-      "image": "https://jaymax.co/Jay-Maxwell-Headshot-Smiling.jpeg",
+      "image": "https://jaymax.co/Jay-Maxwell-Smiling.jpeg",
       "description": "Jay Maxwell – Digital Experience Strategist specializing in web design, hosting, brand management, graphic design, photography, and generative AI solutions.",
       "email": "mailto:jay@jaymax.co",
       "telephone": "+1-812-727-0642",
@@ -84,7 +92,6 @@
         "Web Hosting",
         "Digital Brand Management",
         "Graphic Design",
-        "Photography",
         "Generative AI Solutions"
       ],
       "worksFor": { "@id": "https://jaymax.co/#localbusiness" },
@@ -115,12 +122,6 @@
         },
         {
           "@type": "Service",
-          "name": "Photography",
-          "description": "Professional photography services for brand imagery, product shots, and promotional content by Michael Sartiano.",
-          "provider": { "@id": "https://jaymax.co/#localbusiness" }
-        },
-        {
-          "@type": "Service",
           "name": "Generative AI Solutions",
           "description": "AI-driven content creation, image generation, and workflow automation to enhance brand storytelling and efficiency.",
           "provider": { "@id": "https://jaymax.co/#localbusiness" }
@@ -132,15 +133,16 @@
       "@id": "https://jaymax.co/#localbusiness",
       "name": "JayMax.co",
       "url": "https://jaymax.co",
-      "image": "https://jaymax.co/Jay-Maxwell-Headshot-Smiling.jpeg",
+      "founder": { "@id": "https://jaymax.co/#person" },
+      "image": "https://jaymax.co/Jay-Maxwell-Smiling.jpg",
       "description": "Digital Experience Strategist in Fort Wayne, Indiana, offering web design, hosting, brand management, graphic design, photography, and AI-driven solutions.",
       "telephone": "+1-812-727-0642",
       "email": "mailto:jay@jaymax.co",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Fort Wayne",
-        "addressRegion": "Indiana",
-        "addressCountry": "USA"
+        "addressRegion": "IN",
+        "addressCountry": "US"
       },
       "priceRange": "$$",
       "sameAs": [
@@ -148,10 +150,10 @@
         "https://bsky.app/profile/jaymaxco.bsky.social",
         "https://share.google/syvooJxKM1bhjbSMy"
       ],
-      "areaServed": {
-        "@type": "Place",
-        "name": "Fort Wayne, Indiana"
-      }
+      "areaServed": [
+        { "@type": "Place", "name": "Fort Wayne, IN" },
+        { "@type": "Place", "name": "Indiana" }
+      ]
     }
   ]}</script>
 </head>
@@ -206,27 +208,26 @@
         </div>
         <div class="container">
             <div class="text-center">
-                <h2 id="services"><mark>Streamlined</mark> Digital Marketing & Branding Services for Results</h2>
+                <h2><mark>Streamlined</mark> Digital Marketing & Branding Services for Results</h2>
                 <p>My philosophy is to keep things simple: focusing only on what’s necessary and delivering the highest
                     quality results.</p>
             </div>
             <div>
-                <hr>
-                <div class="services">
-                    <div class="card">
+                <hr id="services">
+                <div class="services five-s">
+                    <a href="./web-design-development.html" class="card contrast">
                         <div>
                             <div>
                                 <h3><strong>Web Design & Development</strong></h3>
                                 <img src="./images/web-design-icon.svg" alt="">
                                 <p>Clean, user-friendly websites tailored to client needs.</p>
                             </div>
-
                             <div>
 
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
+                    </a>
+                    <a href="./web-hosting-management.html" class="card contrast">
                         <div>
                             <div>
                                 <h3><strong>Web Hosting & Management</strong></h3>
@@ -237,8 +238,8 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
+                    </a>
+                    <a href="./digital-brand-management.html" class="card contrast">
                         <div>
                             <div>
                                 <h3><strong>Digital Brand Management</strong></h3>
@@ -249,8 +250,8 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
+                    </a>
+                    <a href="./generative-ai.html" class="card contrast">
                         <div>
                             <div>
                                 <h3><strong>Generative AI Consulting</strong></h3>
@@ -261,8 +262,8 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
+                    </a>
+                    <a href="./graphic-design-branding.html" class="card contrast">
                         <div>
                             <div>
                                 <h3><strong>Graphic Design & Branding</strong></h3>
@@ -273,40 +274,30 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div>
-                            <div>
-                                <h3><strong>Photography by Michael Sartiano</strong></h3>
-                                <img src="./images/photography-icon.svg" alt="">
-                                <p>Professional photography services for brand imagery, product shots, and promotional
-                                    content.</p>
-                            </div>
-                            <div>
-
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <hr>
             <div class="slider" style="
             --width: 100px;
             --height: 100px;
-            --quantity: 11;
-            --duration: 15s;">
+            --quantity: 14;
+            --duration: 20s;">
                 <ul>
                     <li style="--position: 1"><img src="./images/html5-logo.svg" alt="" tabindex="0"></li>
                     <li style="--position: 3"><img src="./images/css3-logo.svg" alt="" tabindex="0"></li>
                     <li style="--position: 2"><img src="./images/wordpress-icon-logo.svg" alt="" tabindex="0"></li>
                     <li style="--position: 6"><img src="./images/google-business-logo.svg" alt="" tabindex="0"></li>
                     <li style="--position: 8"><img src="./images/openai-logo.svg" alt="" tabindex="0"></li>
+                    <li style="--position: 12"><img src="./images/google-gemini-icon.svg" alt="" tabindex="0"></li>
                     <li style="--position: 4"><img src="./images/react-js-logo.svg" alt="" tabindex="0"></li>
                     <li style="--position: 5"><img src="./images/illustrator-logo.svg" alt="" tabindex="0"></li>
                     <li style="--position: 7"><img src="./images/indesign-logo.svg" alt="" tabindex="0"></li>
                     <li style="--position: 9"><img src="./images/gimp-logo.svg" alt="" tabindex="0"></li>
                     <li style="--position: 10"><img src="./images/inkscape-logo.svg" alt="" tabindex="0"></li>
                     <li style="--position: 11"><img src="./images/figma-logo.svg" alt="" tabindex="0"></li>
+                    <li style="--position: 13"><img src="./images/google-analytics-icon.svg" alt="" tabindex="0"></li>
+                    <li style="--position: 14"><img src="./images/claude-icon.svg" alt="" tabindex="0"></li>
                 </ul>
             </div>
         </div>
@@ -361,6 +352,10 @@
                                 <figure>
                                     <img src="./images/wordpress-icon-logo.svg" alt="WordPress logo">
                                     <figcaption>WordPress</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="./images/google-business-logo.svg" alt="Google Business logo">
+                                    <figcaption>Google Business</figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -444,6 +439,10 @@
                                     <img src="./images/indesign-logo.svg" alt="Adobe InDesign logo">
                                     <figcaption>InDesign</figcaption>
                                 </figure>
+                                <figure>
+                                    <img src="./images/google-business-logo.svg" alt="Google Business logo">
+                                    <figcaption>Google Business</figcaption>
+                                </figure>
                             </div>
                         </div>
                     </div>
@@ -486,8 +485,21 @@
                                 <figcaption>OpenAI</figcaption>
                             </figure>
                             <figure>
+                                <img src="./images/google-gemini-icon.svg" alt="Google Gemini logo">
+                                <figcaption>Google Gemini</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="./images/claude-icon.svg" alt="Claude AI logo">
+                                <figcaption>Claude AI</figcaption>
+                            </figure>
+                            <figure>
                                 <img src="./images/google-business-logo.svg" alt="Google Business logo">
                                 <figcaption>Google Business</figcaption>
+                            </figure>
+                                <figure>
+                                <img src="./images/google-analytics-icon.svg" alt="Google Analytics logo">
+                                <figcaption>Google Analytics</figcaption>
+                            </figure>
                             </figure>
                             <figure>
                                 <img src="./images/figma-logo.svg" alt="Figma logo">
@@ -556,6 +568,7 @@
                         <p>Ready to start your next project? Get in touch with me to schedule your free initial
                             consultation.</p>
                     </hgroup>
+                    <hr>
                     <form action="https://formsubmit.co/d1dc541069ea8944ed2007b5fd62315c" method="POST">
                         <fieldset>
                             <div class="grid">

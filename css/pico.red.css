@@ -15,7 +15,7 @@
   --pico-font-weight: 400;
   --pico-font-size: 100%;
   --pico-text-underline-offset: 0.1rem;
-  --pico-border-radius: 0 0.25rem 0 0.25rem;
+  --pico-border-radius: 0.25rem;
   --pico-border-width: 0.0625rem;
   --pico-outline-width: 0.125rem;
   --pico-transition: 0.2s ease-in-out;
@@ -98,8 +98,8 @@ h1 {
 }
 
 h2 {
-  --pico-font-size: 1.8rem;
-  --pico-line-height: 1.15;
+  --pico-font-size: 3rem;
+  --pico-line-height: 1.05;
   --pico-typography-spacing-top: 2.625rem;
 }
 
@@ -668,6 +668,7 @@ section {
   margin-left: auto;
   padding-right: var(--pico-spacing);
   padding-left: var(--pico-spacing);
+  padding-top: var(--pico-spacing);
 }
 
 @media (min-width: 576px) {
@@ -815,7 +816,7 @@ hgroup {
 }
 hgroup > * {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 hgroup > *:not(:first-child):last-child {
   /* --pico-color: var(--pico-muted-color); */
