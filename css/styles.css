@@ -229,9 +229,6 @@ nav {
 
     & ul {
         padding: var(--pico-spacing);
-        background-color: rgba(255, 255, 255, 0.33);
-        border-radius: 0 0 25px 25px;
-        filter: drop-shadow(2px 3px 3px rgba(255, 255, 255, 0.25));
         flex-direction: row;
         justify-content: space-around;
 
@@ -242,10 +239,8 @@ nav {
 
     &>div {
         padding: var(--pico-spacing);
-        background-color: rgba(255, 255, 255, 0.33);
-        border-radius: 0 0 25px 25px;
-        filter: drop-shadow(2px 3px 3px rgba(255, 255, 255, 0.25));
         display: flex;
+        flex-flow: row wrap;
         align-items: center;
         justify-content: center;
         gap: 20px;
@@ -368,7 +363,21 @@ main {
 
                 &:hover:after {
                     color: var(--pico-primary);
+                    content: "⇲";
                     /* filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)); */
+                }
+
+                &:before {
+                    position: absolute;
+                    bottom: 0.4rem;
+                    right: calc(1rem + 15px);
+                }
+
+                &:hover:before {
+                    color: var(--pico-primary);
+                    padding: 5px;
+                    content: "LEARN MORE";
+                    font-weight: 600;
                 }
 
                 & img {
