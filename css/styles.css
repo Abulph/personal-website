@@ -72,6 +72,7 @@ html {
         height: 24px;
         margin: 0 5px;
 
+
         &:hover {
             background-color: var(--pico-primary);
             transform: scale(1.05);
@@ -111,11 +112,11 @@ h4,
 h5,
 h6 {
     font-family: var(--serif-font-stack);
+}
 
-    & h1,
-    h2 {
-        text-shadow: 2px 3px rgba(30, 30, 30, 0.08);
-    }
+h1,
+h2 {
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.15);
 }
 
 small {
@@ -143,10 +144,9 @@ mark a {
     border-radius: 50%;
     box-shadow: 0 0 15px #c52f214b;
     aspect-ratio: 1/1;
-
-    &.uneven-radius {
-        border-radius: 5px;
-    }
+        & img {
+            filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.5));
+        }
 }
 
 .gradient-background {
@@ -223,7 +223,7 @@ header {
 
 a[role="button"]:hover, input[type="submit"]:hover{
     transform: scale(1.03);
-    transition: transform 0.4s;
+    transition: all 0.4s ease-in;
 }
 
 /* NAVIGATION */
@@ -278,8 +278,8 @@ main {
     gap: 1rem;
 
     &>div {
-        padding-top: calc(var(--pico-spacing) * 2);
-        padding-bottom: calc(var(--pico-spacing) * 1);
+        padding-top: calc(var(--pico-spacing) * 3);
+        padding-bottom: calc(var(--pico-spacing) * 3);
     }
 }
 
@@ -321,107 +321,65 @@ main {
 }
 
 .card {
+  display: flex;
+  flex: 1 1 16rem;
+  flex-flow: column nowrap;
+  align-items:stretch;
+  justify-content: space-between;
+  border-radius: 0 20px 0 10px;
+  background: var(--body-gradient);
+  box-shadow: 5px 5px 10px #c52f214b;
+  padding: calc(var(--pico-spacing)/2);
+  text-decoration: none;
+  &:hover, :focus {
+    cursor: pointer;
+    box-shadow: 0 0 10px #c52f21bc;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+
+  & div {
     display: flex;
-    min-height: 14rem;
-    perspective: 1000px;
-    transition: transform 0.25s;
-    margin: 10px 0;
-
-    &:hover {
-        transform-style: preserve-3d;
-        transform: scale(1.03);
-    }
-
-    & div {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transform-style: preserve-3d;
-        transform: rotateY(-6deg);
-        transition: transform 1s;
-        border-radius: 0 20px 0 10px;
-
-        &:hover {
-            box-shadow: 0 0 25px #c52f214b;
-            transform: rotateY(6deg);
-            transition: box-shadow 1s, transform 0.5;
-            /* transition-delay: .6s; */
-        }
-
-        >div {
-            position: absolute;
-            backface-visibility: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: var(--body-gradient);
-            padding: 20px 10px;
-
-            &:nth-child(1) {
-                transform: rotateY(0deg);
-                cursor: pointer;
-
-                &:after {
-                    position: absolute;
-                    bottom: 0;
-                    right: 10px;
-                    content: "⇲";
-                    font-size: 2rem;
-                    color: black;
-                }
-
-                &:hover:after {
-                    color: var(--pico-primary);
-                    content: "⇲";
-                    /* filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)); */
-                }
-
-                &:before {
-                    position: absolute;
-                    bottom: 0.4rem;
-                    right: calc(1rem + 15px);
-                }
-
-                &:hover:before {
-                    color: var(--pico-primary);
-                    padding: 5px;
-                    content: "LEARN MORE";
-                    font-weight: 600;
-                }
-
-                & img {
-                    max-width: 8lvh;
-                    filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.25));
-                }
-
-                & h3 {
-                    font-size: 1.1rem;
-                    text-align: center;
-                }
-
-                & p {
-                    text-align: center;
-                }
-            }
-
-            &:nth-child(2) {
-                transform: rotateY(180deg);
-            }
-        }
-    }
-}
-
-.card {
-    flex: 1 1 0;
-    min-width: 16rem;
-    background-color: none;
-    border-radius: 5px;
-    padding: 0;
-    display: flex;
-    flex-flow: column nowrap;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
     align-items: center;
-}
+    text-align: center;
+        & > img {
+          max-width: 4rem;
+          filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.3));
+        }
+
+        &:after {
+          position: relative;
+          bottom: 0.25rem;
+          right: 0.25rem;
+          display: block;
+          content: "⇲";
+          align-self: flex-end;
+          text-align: right;
+          font-size: 2rem;
+          height: 2rem;
+        }
+
+        &:before {
+          position: absolute;
+          display: none;
+         font-weight: 600;
+          content: "LEARN MORE";
+          bottom: 0rem;
+          right: 1.6rem;
+        }
+
+        &:hover:before, &:hover:after {
+            display: block;
+            color: var(--pico-primary);
+        }
+      }
+    }
+
 
 .slider {
     margin: 2rem 0 0;
@@ -652,7 +610,7 @@ details {
         border-radius: 5px;
         filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.15));
         box-shadow: 0 0 15px #c52f214b;
-
+        line-height: 1.2;
         &:hover {
             transform: scale(1.03);
             transition: transform 0.66s;
@@ -709,6 +667,9 @@ footer {
         background: none;
         background-color: #FFF;
         padding: 10px;
+        & img {
+            filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.3));
+        }
     }
 
     & mark,
@@ -721,32 +682,30 @@ footer {
         font-weight: 700;
     }
 
-    & .services {
-        display: flex;
-        flex-flow: row wrap;
-        gap: 2rem;
-
-        &>div {
-            flex: 1 1 0;
-            min-width: 12rem;
-            background-color: none;
-            border-radius: 5px;
-            padding: 0;
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: center;
+    .card {
+        flex: 1 1 12rem;
+        background: rgba(197, 47, 33, 0.1);
+        transform: none;
+        &:hover {
+        cursor: default;
         }
+        > div {
+        > div {
+        display: grid;
+        place-items: center;
+        grid-template-rows: 5rem auto auto;
+        }
+    }}
 
-    }
-
+    .card div:after, .card div:before{
+    display: none;
+    content: "";
+}
     & .five-s {
         &>div {
             min-width: 16rem;
         }
     }
-    .card div div:nth-child(1):after, .card div div:nth-child(1):before{
-    content: "";
-}
 
 }
 
