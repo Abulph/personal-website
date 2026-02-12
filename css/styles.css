@@ -3,7 +3,7 @@
     --linkedin-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='24' height='24' version='1.1' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='m8 0c-4.4183 8.1162e-16 -8 3.5817-8 8v56c5.4108e-16 4.4183 3.5817 8 8 8h56c4.4183 0 8-3.5817 8-8v-56c0-4.4183-3.5817-8-8-8h-56zm8.3496 10c3.5073 0 6.3477 2.8638 6.3477 6.3965s-2.8404 6.3984-6.3477 6.3984c-3.5073 0-6.3496-2.8658-6.3496-6.3984s2.8423-6.3965 6.3496-6.3965zm33.033 16.273c7.3531 0 12.617 4.4906 12.617 13.777v21.949h-10.684v-18.197c0-4.9894-1.8966-7.7773-5.8457-7.7773-4.2961 0-6.541 2.9013-6.541 7.7773v18.197h-10.297v-34.666h10.297v4.668s3.0966-5.7285 10.453-5.7285zm-38.35 1.0605h10.736v34.666h-10.736v-34.666z' fill='%23007ebb'/%3E%3C/g%3E%3C/svg%3E");
     --google-icon: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2451 0C15.551 5.21343e-05 18.3114 1.1892 20.4375 3.13086L16.9316 6.56738C15.6515 5.38925 14.0484 4.77837 12.2451 4.77832C9.06153 4.77832 6.35622 6.88348 5.3877 9.71973C5.1428 10.4397 4.99805 11.2036 4.99805 12C4.99805 12.7964 5.1428 13.5603 5.3877 14.2803L5.37305 14.291H5.3877C6.35618 17.1273 9.06147 19.2324 12.2451 19.2324C13.8925 19.2324 15.2841 18.7961 16.375 18.0762L16.6143 17.9121C17.7836 17.0666 18.5636 15.8667 18.835 14.4658H12.2451V9.81836H23.7773C23.922 10.6037 24 11.4217 24 12.2725C24 15.927 22.664 19.0041 20.3486 21.0986L19.96 21.4326C17.974 23.0601 15.3445 24 12.2451 24C7.45847 24 3.32832 21.305 1.31348 17.3887V17.3779C0.47867 15.7634 0 13.9417 0 12C0 10.1795 0.420587 8.4644 1.16113 6.92676L1.31348 6.62207C3.32832 2.6948 7.45847 0 12.2451 0Z' fill='%23EA4335'/%3E%3C/svg%3E%0A");
     --hamburger-icon: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 18h16M4 12h16M4 6h16' stroke='%23000' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-    --serif-font-stack: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    --serif-font-stack:'Newsreader', Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
     --pico-mark-gradient: linear-gradient(to left, #c52f21, #f09f42);
     --header-gradient: linear-gradient(to left, #c52f21, #f09f42b0);
     --body-gradient: linear-gradient(to right, #c52f214b, #f09f4248);
@@ -11,6 +11,10 @@
     /* SERVICES PAGES */
     --web-design-gradient: linear-gradient(to right, #ff6153b4, #f8ff71bb);
     --wd-mark-gradient: linear-gradient(to left, #bc0000, #ff5f33);
+    /* ANIMATIONS */
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1
 }
 
 /* LINKS / PAGE TRANSITION */
@@ -55,6 +59,178 @@ html {
 
 ::view-transition-new(root) {
     animation: 0.6s ease-in both blur-in;
+}
+
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.animate__animated.animate__infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite
+}
+
+.animate__animated.animate__repeat-1 {
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: var(--animate-repeat);
+    animation-iteration-count: var(--animate-repeat)
+}
+
+.animate__animated.animate__repeat-2 {
+    -webkit-animation-iteration-count: 2;
+    animation-iteration-count: 2;
+    -webkit-animation-iteration-count: calc(var(--animate-repeat)*2);
+    animation-iteration-count: calc(var(--animate-repeat)*2)
+}
+
+.animate__animated.animate__repeat-3 {
+    -webkit-animation-iteration-count: 3;
+    animation-iteration-count: 3;
+    -webkit-animation-iteration-count: calc(var(--animate-repeat)*3);
+    animation-iteration-count: calc(var(--animate-repeat)*3)
+}
+
+.animate__animated.animate__delay-1s {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-delay: var(--animate-delay);
+    animation-delay: var(--animate-delay)
+}
+
+.animate__animated.animate__delay-2s {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-delay: calc(var(--animate-delay)*2);
+    animation-delay: calc(var(--animate-delay)*2)
+}
+
+.animate__animated.animate__delay-3s {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    -webkit-animation-delay: calc(var(--animate-delay)*3);
+    animation-delay: calc(var(--animate-delay)*3)
+}
+
+.animate__animated.animate__delay-4s {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    -webkit-animation-delay: calc(var(--animate-delay)*4);
+    animation-delay: calc(var(--animate-delay)*4)
+}
+
+.animate__animated.animate__delay-5s {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+    -webkit-animation-delay: calc(var(--animate-delay)*5);
+    animation-delay: calc(var(--animate-delay)*5)
+}
+
+.animate__animated.animate__faster {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-duration: calc(var(--animate-duration)/2);
+    animation-duration: calc(var(--animate-duration)/2)
+}
+
+.animate__animated.animate__fast {
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-duration: calc(var(--animate-duration)*0.8);
+    animation-duration: calc(var(--animate-duration)*0.8)
+}
+
+.animate__animated.animate__slow {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-duration: calc(var(--animate-duration)*2);
+    animation-duration: calc(var(--animate-duration)*2)
+}
+
+.animate__animated.animate__slower {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-duration: calc(var(--animate-duration)*3);
+    animation-duration: calc(var(--animate-duration)*3)
+}
+
+@media (prefers-reduced-motion:reduce),
+print {
+    .animate__animated {
+        -webkit-animation-duration: 1ms !important;
+        animation-duration: 1ms !important;
+        -webkit-transition-duration: 1ms !important;
+        transition-duration: 1ms !important;
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important
+    }
+
+    .animate__animated[class*=Out] {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.animate__fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.animate__fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp
 }
 
 /* ICONS */
@@ -162,6 +338,7 @@ mark a {
 .center-image {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .image-seamless {
@@ -443,6 +620,8 @@ main {
     &>div>img {
         border-radius: 0 20px 0 0;
         box-shadow: 0 0 15px #c52f214b;
+        max-width: 100%;
+        height: auto;
     }
 
     & h3 {
@@ -528,6 +707,110 @@ main {
     }
 }
 
+.graphics > div > img {
+    box-shadow: none;
+}
+
+/* PORTFOLIO TOGGLE */
+.portfolio-toggle-row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--pico-spacing);
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 0 0.5rem;
+}
+
+.portfolio-toggle {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 280px;
+}
+.portfolio-toggle input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.portfolio-toggle label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.portfolio-toggle label:before {
+  content: '';
+  width: 280px;
+  height: 42px;
+  background: #ccc;
+  position: relative;
+  display: inline-block;
+  border-radius: 46px;
+  box-sizing: border-box;
+  transition: 0.2s ease-in;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.25);
+}
+.portfolio-toggle label:after {
+  content: '🌐 WEBSITES';
+  font-size: 14px;
+  position: absolute;
+  width: 140px;
+  height: 38px;
+  border-radius: 1rem;
+  padding: 0 5px;
+  text-align: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  align-content: center;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: #fff;
+  box-sizing: border-box;
+  transition: 0.2s ease-in;
+}
+.portfolio-toggle:hover label:after {
+    left: 15px;
+    scale: 1.05;
+}
+.portfolio-toggle:hover label:before {
+    background:rgb(from var(--pico-primary) r g b / calc(alpha * 0.4));;
+}
+.portfolio-toggle input[type="checkbox"]:checked + label:before {
+  background: var(--pico-mark-gradient);
+}
+.portfolio-toggle input[type="checkbox"]:checked + label:after {
+  content: '🎨 GRAPHICS';
+  left: 138px;
+  
+}
+
+.portfolio-toggle-row:has(.portfolio-toggle input[type="checkbox"]:checked) 
+  ~ .web {
+  display: none;
+}
+
+.portfolio-toggle-row:has(.portfolio-toggle input[type="checkbox"]:checked) 
+  ~ .web + hr {
+  display: none;
+}
+
+.portfolio-toggle-row:has(.portfolio-toggle input[type="checkbox"]) 
+  ~ .graphics {
+  display: none;
+}
+
+.portfolio-toggle-row:has(.portfolio-toggle input[type="checkbox"]:checked) 
+  ~ .graphics {
+  display: grid;
+}
+
+
+
 /* ABOUT SECTION */
 .about {
     display: grid;
@@ -585,12 +868,21 @@ main {
 
 /* CONTACT SECTION */
 
+
+.contact .profile-container {
+    max-width: 120px;
+}
+
 form {
     & textarea {
         min-height: 12rem;
     }
     & input, textarea {
         box-shadow: 2px 3px 5px #c52f214b;
+    }
+    & label {
+        margin-bottom: 5px;
+        margin-left: 5px;
     }
 
     & label:has(+ input:required)::after {
@@ -758,10 +1050,12 @@ footer {
 
 }
 
-.farris-style, .corinne{
+.farris-style, .corinne, .igs{
 
     & .portfolio-entry{
     padding: 2rem 0;
+    min-height: 95vh;
+    align-items: center;
     & p, h2, h3, small{
     font-family: "Overpass";
     color: #FFF;
@@ -796,5 +1090,5 @@ footer {
     background: linear-gradient(180deg,rgba(120, 109, 10, 0.8) 0%, rgba(72, 84, 40, 0.8) 100%);
     }
 .corinne{
-        background: linear-gradient(180deg,rgba(251, 165, 79, 1) 0%, rgba(79, 85, 95, 0.8) 100%);
+        background: linear-gradient(180deg,rgba(251, 165, 79, 1) 0%, rgba(32,61,78,0.8) 100%);
     }
